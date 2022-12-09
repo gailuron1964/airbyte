@@ -5,5 +5,5 @@ plugins {
 }
 
 airbytePython {
-    moduleDirectory 'source_merge'
+    moduleDirectory 'source_merge_accounting'
 }

@@ -1,6 +1,6 @@
 *
 !Dockerfile
 !main.py
-!source_merge
+!source_merge_accounting
 !setup.py
 !secrets

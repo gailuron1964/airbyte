@@ -1,0 +1,37 @@
+{
+  "$schema": "http://json-schema.org/draft-07/schema#",
+  "type": "object",
+  "properties": {
+    "id": {"type": ["null", "string"]},
+    "remote_id": {"type": ["null", "string"]},
+    "name": {"type": ["null", "string"]},
+    "is_supplier": {"type": ["null", "boolean"]},
+    "is_customer": {"type": ["null", "boolean"]},
+    "email_address": {"type": ["null", "string"]},
+    "tax_number": {"type": ["null", "string"]},
+    "status": {"type": ["null", "string"]},
+    "currency": {"type": ["null", "string"]},
+    "remote_updated_at": {
+      "type": ["null", "string"],
+      "format": "date-time"
+    },
+    "company": {"type": ["null", "string"]},
+    "addresses": {
+      "type": ["array"],
+      "items": {
+        "type": ["null", "string"]
+      }
+    },
+    "phone_numbers": {
+      "type": ["array"],
+      "items": {
+        "type": ["null", "object"],
+        "properties": {
+          "number": {"type": ["null", "string"]},
+          "type": {"type": ["null", "string"]}
+        }
+      }
+    },
+    "remote_was_deleted": {"type": ["boolean"]}
+  }
+}

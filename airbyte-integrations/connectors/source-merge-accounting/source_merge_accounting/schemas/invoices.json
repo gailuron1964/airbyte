@@ -1,0 +1,63 @@
+{
+  "$schema": "http://json-schema.org/draft-07/schema#",
+  "type": "object",
+  "properties": {
+    "id": {"type": ["string"]},
+    "remote_id": {"type": ["null", "string"]},
+    "type": {"type": ["null", "string"]},
+    "contact": {"type": ["null", "string"]},
+    "number": {"type": ["null", "string"]},
+    "issue_date": {
+      "type": ["null", "string"],
+      "format": "date-time"
+    },
+    "due_date": {
+      "type": ["null", "string"],
+      "format": "date-time"
+    },
+    "paid_on_date": {
+      "type": ["null", "string"],
+      "format": "date-time"
+    },
+    "memo": {"type": ["null", "string"]},
+    "company": {"type": ["null", "string"]},
+    "currency": {"type": ["null", "string"]},
+    "exchange_rate": {"type": ["null", "number"]},
+    "total_discount": {"type": ["null", "number"]},
+    "sub_total": {"type": ["null", "number"]},
+    "total_tax_amount": {"type": ["null", "number"]},
+    "total_amount": {"type": ["null", "number"]},
+    "balance": {"type": ["null", "number"]},
+    "remote_updated_at": {
+      "type": ["null", "string"],
+      "format": "date-time"
+    },
+    "payments": {
+      "type": ["array"],
+      "items": {
+        "type": ["null", "string"]
+      }
+    },
+    "remote_was_deleted": {"type": ["boolean"]},
+    "line_items": {
+      "type": ["array"],
+      "items": {
+        "type": ["object"],
+        "properties": {
+          "id": {"type": ["null", "string"]},
+          "remote_id": {"type": ["null", "string"]},
+          "description": {"type": ["null", "string"]},
+          "unit_price": {"type": ["null", "number"]},
+          "quantity": {"type": ["null", "number"]},
+          "total_amount": {"type": ["null", "number"]},
+          "currency": {"type": ["null", "string"]},
+          "exchange_rate": {"type": ["null", "string"]},
+          "item": {"type": ["null", "string"]},
+          "account": {"type": ["null", "string"]},
+          "tracking_category": {"type": ["null", "string"]},
+          "company": {"type": ["null", "string"]}
+        }
+      }
+    }
+  }
+}

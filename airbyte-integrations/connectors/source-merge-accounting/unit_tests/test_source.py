@@ -4,17 +4,17 @@
 
 from unittest.mock import MagicMock
 
-from source_merge.source import SourceMerge
+from source_merge_accounting.source import SourceMergeAccounting
 
 
 def test_check_connection(mocker):
-    source = SourceMerge()
+    source = SourceMergeAccounting()
     logger_mock, config_mock = MagicMock(), MagicMock()
     assert source.check_connection(logger_mock, config_mock) == (True, None)
 
 
 def test_streams(mocker):
-    source = SourceMerge()
+    source = SourceMergeAccounting()
     config_mock = MagicMock()
     streams = source.streams(config_mock)
     # TODO: replace this with your streams number

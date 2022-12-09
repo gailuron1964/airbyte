@@ -1,0 +1,36 @@
+{
+  "$schema": "http://json-schema.org/draft-07/schema#",
+  "type": "object",
+  "properties": {
+    "remote_was_deleted": {"type": ["boolean"]},
+    "line_items": {
+      "type": ["array"],
+      "items": {
+        "type": ["object"],
+        "properties": {
+          "memo": {"type": ["null", "string"]},
+          "quantity": {"type": ["null", "string"]},
+          "item": {"type": ["null", "string"]},
+          "account": {"type": ["null", "string"]},
+          "tracking_category": {"type": ["null", "string"]},
+          "total_line_amount": {"type": ["null", "string"]},
+          "tax_rate": {"type": ["null", "string"]},
+          "currency": {"type": ["null", "string"]},
+          "exchange_rate": {"type": ["null", "string"]},
+          "remote_id": {"type": ["null", "string"]}
+        }
+      }
+    },
+    "company": {"type": ["null", "string"]},
+    "exchange_rate": {"type": ["null", "string"]},
+    "currency": {"type": ["null", "string"]},
+    "total_amount": {"type": ["null", "string"]},
+    "contact": {"type": ["null", "string"]},
+    "account": {"type": ["null", "string"]},
+    "transaction_date": {"type": ["null", "string"]},
+    "number": {"type": ["null", "string"]},
+    "remote_id": {"type": ["null", "string"]},
+    "transaction_type": {"type": ["null", "string"]},
+    "id": {"type": ["string"]}
+  }
+}

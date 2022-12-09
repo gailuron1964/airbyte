@@ -1,10 +1,10 @@
 # See [Source Acceptance Tests](https://docs.airbyte.com/connector-development/testing-connectors/source-acceptance-tests-reference)
 # for more information about how to configure these tests
-connector_image: airbyte/source-merge:dev
+connector_image: airbyte/source-merge-accounting:dev
 acceptance_tests:
   spec:
     tests:
-      - spec_path: "source_merge/spec.yaml"
+      - spec_path: "source_merge_accounting/spec.yaml"
   connection:
     tests:
       - config_path: "secrets/config.json"

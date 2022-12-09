@@ -6,8 +6,8 @@
 import sys
 
 from airbyte_cdk.entrypoint import launch
-from source_merge import SourceMerge
+from source_merge_accounting import SourceMergeAccounting
 
 if __name__ == "__main__":
-    source = SourceMerge()
+    source = SourceMergeAccounting()
     launch(source, sys.argv[1:])
