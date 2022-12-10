@@ -3,37 +3,37 @@
   "type": "object",
   "properties": {
     "remote_was_deleted": {"type": ["boolean"]},
-    "line_items": {
+    "lines": {
       "type": ["array"],
       "items": {
         "type": ["object"],
         "properties": {
-          "memo": {"type": ["null", "string"]},
-          "quantity": {"type": ["null", "string"]},
-          "item": {"type": ["null", "string"]},
+          "description": {"type": ["null", "string"]},
           "account": {"type": ["null", "string"]},
+          "company": {"type": ["null", "string"]},
           "tracking_category": {"type": ["null", "string"]},
-          "total_line_amount": {"type": ["null", "string"]},
-          "tax_rate": {"type": ["null", "string"]},
-          "currency": {"type": ["null", "string"]},
-          "exchange_rate": {"type": ["null", "string"]},
+          "net_amount": {"type": ["null", "number"]},
+          "item": {"type": ["null", "string"]},
           "remote_id": {"type": ["null", "string"]}
         }
       }
     },
+    "memo": {"type": ["null", "string"]},
     "company": {"type": ["null", "string"]},
     "exchange_rate": {"type": ["null", "string"]},
     "currency": {"type": ["null", "string"]},
-    "total_amount": {"type": ["null", "string"]},
+    "total_amount": {"type": ["null", "number"]},
     "contact": {"type": ["null", "string"]},
     "account": {"type": ["null", "string"]},
+    "remote_created_at": {
+      "type": ["null", "string"],
+      "format": "date-time"
+    },
     "transaction_date": {
       "type": ["null", "string"],
       "format": "date-time"
     },
-    "number": {"type": ["null", "string"]},
     "remote_id": {"type": ["null", "string"]},
-    "transaction_type": {"type": ["null", "string"]},
     "id": {"type": ["string"]}
   }
 }

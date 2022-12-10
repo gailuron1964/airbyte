@@ -72,6 +72,14 @@ class Accounts(MergeStream):
     ) -> str:
         return "accounts"
 
+class Expenses(MergeStream):
+    primary_key = "id"
+
+    def path(
+        self, stream_state: Mapping[str, Any] = None, stream_slice: Mapping[str, Any] = None, next_page_token: Mapping[str, Any] = None
+    ) -> str:
+        return "expenses"
+
 class MergeAuthMixin:
     """
     Mixin class for providing additional HTTP header for specifying account ID
@@ -116,4 +124,5 @@ class SourceMergeAccounting(AbstractSource):
             Items(authenticator=auth), 
             Transactions(authenticator=auth),
             Accounts(authenticator=auth),
+            Expenses(authenticator=auth),
         ]
